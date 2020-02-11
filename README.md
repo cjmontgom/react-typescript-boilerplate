@@ -19,6 +19,7 @@ npm start
 
 ## To do
 
-[] Add test folder and single test 
+[] Add test folder and single test.
+
 [] Deploy 
 
