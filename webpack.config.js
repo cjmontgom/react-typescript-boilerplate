@@ -11,6 +11,11 @@ module.exports = {
         filename: 'bundle.js'
     },
 
+    // specify localhost port to listen on (this is not required, webpack-dev-server will run portfinder)
+    devServer: {
+        port: 9000
+    },
+
     // adding .ts and .tsx to resolve.extensions will help babel look for .ts and .tsx files to transpile
     resolve: {
         extensions: ['.ts', '.tsx', '.js']
