@@ -6,35 +6,23 @@ jobs:
 
     working_directory: ~/repo
 
-  steps:
-    - checkout
-    - run:
-        name: update-npm
-        command: 'sudo npm install -g npm@latest'
+    steps:
+      - checkout
 
-    - restore_cache:
-      keys:
-        - v1-dependencies-{{ checksum "package.json" }}
-        - v1-dependencies-
+      - run:
+          name: update-npm
+          command: 'sudo npm install -g npm@latest'
 
-    - run: npm install
+      - restore_cache:
+        keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
 
-    - save_cache:
-      paths:
-        - node_modules
-      key: dependency-cache-{{ checksum "package.json" }}
+      - run: npm install
 
-    - run: npm test
+      - save_cache:
+        paths:
+          - node_modules
+        key: v1-dependencies-{{ checksum "package.json" }}
 
-
-#    Ok, let’s look what’s going on here;
-#    We are using circleci config version 2.1.
-#    In the jobs->build we are giving the config details.
-#    For this build, we’ll use circleci/node:12.9.1-browsers image.
-#  Because we’ll try to implement an e2e test soon. This image has built-in chromium. You can see the other circleci images here.
-#    checkout will checkout the code from your repository.
-#    restore_cache will restore the cache if exists
-#    run: yarn install will install the packages
-#    save_cache will cache node_modules directory.
-#    run: yarn test will run the tests
-#    Now, commit and push your code and signup to CircleCI and click Add Project. Choose your repository, select Linux-Node and click Start Building.
+      - run: npm test
