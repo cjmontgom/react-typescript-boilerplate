@@ -31,3 +31,5 @@ jobs:
 
       # run tests!
       - run: npm test
+
+      # get webpack to build for production
