@@ -32,7 +32,7 @@ cd react-typescript-boilerplate
 # Install dependencies
 npm install (or yarn install)
 
-# Start the development server
+# Start the development server (server side and client side)
 npm run dev
 
 # Build for production
