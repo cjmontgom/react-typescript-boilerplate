@@ -19,6 +19,7 @@ In the production mode, we will have only 1 server running. All the client side 
 - Prettier - to make things pretty and formatted.
 - Nodemon - to automatically restart the server when making changes to server side code.
 - Jest - paired with react-testing-library for testing rendered components.
+- Node-fetch - lightweight library for using the Fetch API in Node to make HTTP requests.
 
 #### Quickstart
 
