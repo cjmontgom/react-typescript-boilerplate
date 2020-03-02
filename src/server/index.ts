@@ -10,7 +10,7 @@ const app = express();
         // configured to serve the static files from dist directory.
 
 // app.use(function(_req: any, res: any, next: any) {
-//     res.header("Access-Control-Allow-Origin", "http://localhost:9000"); // update to match the domain you will make the request from
+//     res.header("Access-Control-Allow-Origin", clientUrl); // update to match the domain you will make the request from
 //     next();
 // });
 
