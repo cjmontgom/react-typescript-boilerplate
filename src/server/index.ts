@@ -14,7 +14,7 @@ const app = express();
 //     next();
 // });
 
-app.get('/api/getUsername', (_req: Request, res: Response) => res.send({ username: 'chloe' }));
+app.get('/api/getUsername', (_req: Request, res: Response) => res.send({ username: 'ALLISON' }));
         // route definition. Callback to be invoked whenever there is a get req with this path, relative to site root
 
 app.listen(8080, () => console.log("Listening on port 8080!"));
