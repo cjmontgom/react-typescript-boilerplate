@@ -1,15 +1,14 @@
 import App from "../components/App";
 import * as React from "react";
 import { render } from "@testing-library/react";
+
 import "@testing-library/jest-dom/extend-expect";
 
 describe("<App />", () => {
   it("should display a page with the header", async () => {
+    const { findByText } = render(<App />);
+    const component = await findByText("Hello chloe");
 
-    const appRender = await render(<App />);
-    await Promise.resolve();
-    expect(appRender.getByText('Loading... please wait!')).toBeInTheDocument()
-    expect(appRender.findByText('Welcome back!')).toBeInTheDocument()
-
+    expect(component).toBeTruthy;
   });
 });
